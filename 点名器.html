@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--文档声明-->
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>GZ41座位表</title>
+		<title>GZ52座位表</title>
 		<style>
 			body,h2,table,tr,td{
 				padding: 0;
@@ -29,30 +29,42 @@
 				border: 1px solid #000;
 				border-radius: 5px;
 			}
+			#box > table .on{
+				background-color: green;
+			}
+			#box > table .off{
+				background-color: deepskyblue;
+			}
+			#box > #btn{
+				width: 50px;
+				height: 30px;
+				display: block;
+				margin: 10px auto 0;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="box">
-			<h2>41期的点名器</h2>
+			<h2>52期的点名器</h2>
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td></td>
-					<td>1</td>
+					<td>李捷东</td>
 					<td></td>
-					<td>2</td>
+					<td>李</td>
 					<td></td>
 					<td></td>
 					<td rowspan="8">过道</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
+					<td>捷</td>
+					<td>东</td>
+					<td>李</td>
 					<td></td>
 					<td></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td>6</td>
-					<td>7</td>
+					<td>捷</td>
+					<td>西</td>
 					<td></td>
 					<td>8</td>
 					<td>9</td>
@@ -140,13 +152,53 @@
 					<td></td>
 					<td></td>
 				</tr>
-			</div>
-		</table>
+			</table>
+			<input type="button" name="btn" id="btn" value="开始" />
+		</div>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript">
 			$val = $('#box > table td');
-			for(var i = 0,$vals = $val.length; i < $vals; i++){
-				$val[i].css('background-color','deepskyblue');
+			var arr = [];
+			for(var i = 0,vals = $val.length; i < vals; i++){
+				if(i == 1){
+					$val.eq(1).addClass("on");
+					arr.push(i);
+				}
+				if($val.eq(i).html() != "" && i != 6 && i != 1){
+					$val.eq(i).css('background-color','deepskyblue');
+					arr.push(i);
+				}
+			}
+			var i = null;
+			var status = "on";
+			var time = null;
+			$('#btn').click(function(){
+				$val.eq(1).removeClass("on");
+				$val.eq(1).addClass("off");
+				if(status == "on"){
+					$(this).val("停止");
+					time = setInterval(function(){
+						i = getRandom(0, arr.length - 1);
+						for(var j = 0; j < arr.length; j++){
+							$val.eq(arr[j]).css('background-color','deepskyblue');
+						}
+						$val.eq(arr[i]).css('background-color','green');
+					}, 50);
+					status = "off";
+				}else{
+					$val.removeClass("on");
+					$(this).val("开始");
+					status = "on";
+					clearInterval(time);
+					$val.eq(arr[i]).css('background-color','green');
+					arr.splice(i, 1);
+				}
+			});
+			/*--------------------获取min - max之间的随机整数----------------------*/
+			function getRandom(min, max){
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
 		</script>
 	</body>

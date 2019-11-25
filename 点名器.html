@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>GZ41座位表</title>
+		<style>
+			body,h2,table,tr,td{
+				padding: 0;
+				margin: 0;
+			}
+			#box > h2{
+				text-align: center;
+				color: blue;
+			}
+			#box > table{
+				width: 100%;
+			}
+			#box > table{
+				border: 1px solid #000;
+			}
+			#box > table tr{
+				width: 100%;
+			}
+			#box > table td{
+				width: calc(100% / 12);
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				border: 1px solid #000;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<h2>41期的点名器</h2>
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td></td>
+					<td>1</td>
+					<td></td>
+					<td>2</td>
+					<td></td>
+					<td></td>
+					<td rowspan="8">过道</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>6</td>
+					<td>7</td>
+					<td></td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td></td>
+					<td></td>
+					<td>12</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td></td>
+					<td></td>
+					<td>17</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</div>
+		</table>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$val = $('#box > table td');
+			for(var i = 0,$vals = $val.length; i < $vals; i++){
+				$val[i].css('background-color','deepskyblue');
+			}
+		</script>
+	</body>
+</html>
+<!-- 
+    git status     查看状态
+    git add .      添加所有有改变的文件或文件夹
+    git commit -m '注释'    提交到本地仓库
+远程仓库管理(增删查)
+    git remote  查看远程仓库别名
+    git remote -v 查看别名和地址
+    git remote add 别名 地址
+        地址：
+            1. ssh协议
+            2. https协议
+    git remote rm 别名    删除
+推送到远程仓库中
+    git push -u origin master
+    
+密钥管理
+    1. 生成rsa非对称密钥
+        ssh-keygen -t rsa   //再敲3次回车
+    2. 查看并复制公钥内容
+    3. 将公钥内容放到GitHub服务器上
+        右上角头像 -> settings -> SSH and GPG keys -> new SSH key -> title随便写，Key粘贴公钥内容 -> Add SSH key
+ -->

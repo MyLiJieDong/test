@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style>
+        .ren{
+            background:lightblue;
+            transition:all 1s;
+        }
+        .ren:hover{
+            color:lime;
+            cursor:pointer;
+            transform:scale(1.5) rotate(360deg);
+        }
+        html{
+        	animation: name 0.5s linear 1 alternate;
+        }
+        @keyframes name{
+        	from{
+        		transform: rotate(0deg);
+        	}
+        	to{
+        		transform: rotate(30deg);
+        	}
+        }
+    </style>
+</head>
+<body>
+    <table align="center" border="1" width="500">
+        <tr height="50">
+            <th rowspan="2" colspan="2">柱子</th>
+            <th width="100" rowspan="10">过道</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr height="50">
+            <th></th>
+            <th></th>
+        </tr>
+        <tr height="50">
+            <th width="100"></th>
+            <th width="100"></th>
+
+            <th width="100"></th>
+            <th width="100"></th>
+        </tr>
+        <tr height="50">
+            <th class="ren">吴瑞森</th>
+            <th></th>
+            
+            <th class="ren">邓富铖</th>
+            <th class="ren">齐云飞</th>
+        </tr>
+        <tr height="50">
+            <th></th>
+            <th class="ren">李捷东</th>
+            
+            <th></th>
+            <th class="ren">黄子杰</th>
+        </tr>
+        <tr height="50">
+            <th class="ren">张帆</th>
+            <th></th>
+            
+            <th class="ren">徐庆烽</th>
+            <th class="ren">周伯涛</th>
+        </tr>
+        <tr height="50">
+            <th class="ren">邓国东</th>
+            <th class="ren">陈泽杰</th>
+            
+            <th class="ren">林郁腾</th>
+            <th class="ren">杨杰沛</th>
+        </tr>
+        <tr height="50">
+            <th></th>
+            <th class="ren">吴靖辉</th>
+            
+            <th class="ren">黄敏桓</th>
+            <th class="ren">陈志杰</th>
+        </tr>
+        <tr height="50">
+            <th class="ren">武长斌</th>
+            <th></th>
+            
+            <th class="ren">陈钊汶</th>
+            <th></th>
+        </tr>
+        <tr height="50">
+            <th></th>
+            <th></th>
+            
+            <th class="ren">钟华精</th>
+            <th></th>
+        </tr>
+        <tr height="50">
+            <th colspan="2">讲台</th>
+        </tr>
+    </table>
+</body>
+</html>

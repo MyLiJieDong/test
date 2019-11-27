@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 500px;
+				height: 500px;
+				margin: 0 auto;
+				background-color: #000;
+				position: relative;
+			}
+			#box div:nth-child(1){
+				position: absolute;
+				bottom: 0;
+			}
+			#box div:nth-child(1):before{
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				bottom: 120px;
+				background: red;
+				animation: tan 1s ease-in infinite alternate;
+			}
+			#box div:nth-child(1):after{
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 30px;
+				border-radius:50%;
+				bottom: 0px;
+				background: red;
+				opacity: 0;
+				animation: yingzi 1s ease-in infinite alternate;
+			}
+			@keyframes tan{
+				from{
+					/*bottom: 120px;*/
+				}
+				85%{
+					height: 50px;
+				}
+				to{
+					bottom: 0;
+					height: 25px;
+				}
+			}
+			@keyframes yingzi{
+				from{
+					opacity: 0;
+				}
+				85%{
+					opacity: 0.5;
+					height: 5px;
+				}
+				to{
+					opacity: 0.6;
+					height: 1px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+</html>

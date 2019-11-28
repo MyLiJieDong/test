@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@font-face {
+			  	font-family: 'iconfont';
+			  	src: url('./fonts/iconfont.eot');
+			  	src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+			    url('./fonts/iconfont.woff2') format('woff2'),
+			    url('./fonts/iconfont.woff') format('woff'),
+			    url('./fonts/iconfont.ttf') format('truetype'),
+			    url('./fonts/iconfont.svg#iconfont') format('svg');
+			}
+			.iconfont {
+			 	font-family: "iconfont" !important;
+			 	font-style: normal;
+				color: #ccc;
+				font-size: 26px;
+			  	-webkit-font-smoothing: antialiased;
+			  	-moz-osx-font-smoothing: grayscale;
+			}
+			.tianjia:before{
+				content: "\e64b";
+			}
+			.liaotian:before{
+				content: "\e60f";
+			}
+			.tongxunlu:before{
+				content: "\e6c2";
+			}
+			.soucang:before{
+				content: "\e604";
+			}
+			.wenjian:before{
+				content: "\e721";
+			}
+			.shouji:before{
+				content: "\e61b";
+			}
+			.gengduo:before{
+				content: "\e63d";
+			}
+			body,header,main,footer,div,textarea{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				height: 100%;
+				background: url(img/2zrdI1g.jpg) no-repeat 50%;
+				background-size: cover;
+			}
+			body,html{
+				height: 100%;
+			}
+			div{
+				box-sizing: border-box;
+			}
+			header{
+				height: 28px;
+				width: 36px;
+				background: url(img/5af37c4a880a95586cd41c5b251d5562@1x.png) no-repeat;
+				vertical-align: middle;
+				background-position:-196px -210px;
+				position: absolute;
+				top: 60px;
+				left: 60px;
+			}
+			main{
+				position: absolute;
+				top: 70px;
+				left: 50%;
+				height: 580px;
+				width:850px;
+				transform: translateX(-50%);
+				background: #fff;
+			}
+			main > div{
+				height: 100%;
+			}
+			main > div > div{
+				float: left;
+			}
+			main > div .left{
+				position: relative;
+				height: 100%;
+				background-color: #25292C;
+				width: 65px;
+			}
+			main > div .left > div{
+				text-align: center;
+				padding-top: 8px;
+				width: 40px;
+				height: 40px;
+				margin: 18px auto;
+				vertical-align: middle;
+				background-size: 40px 40px;
+				cursor: pointer;
+			}
+			main > div .left > div:nth-last-child(1){
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 0px;
+			}
+			main > div .left > div:nth-last-child(2){
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 50px;
+			}
+			main > div .left > div:nth-child(1){
+				background: url(img/2KriyDK.png) no-repeat;
+				background-size: 40px 40px;
+			}
+			
+			main > div .center{
+				height: 100%;
+				background-color: #E0DEDE;
+				width: 255px;
+			}
+			main > div .center > div:nth-child(1){
+				height: 73px;
+				background-color: #EEEAE8;
+			}
+			main > div .center > div:nth-child(1) > input{
+				position: relative;
+				background-color: #DBD9D8;
+				width: 164px;
+				border: 0px;
+				outline:none;
+				height: 25px;
+				border-radius: 7px;
+				margin-left: 18px;
+				padding-left: 25px;
+				margin-top: 30px;
+			}
+			main > div .center > div:nth-child(1):before{
+				content: "\e613";
+				font-size: 14px;
+				top: 36px;
+				left: 90px;
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				z-index: 99;
+			}
+			main > div .center > div:nth-child(1):after{
+				content: "\e605";
+				font-size: 17px;
+				color: #ccc;
+				top: 35px;
+				left: 248px;
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				z-index: 99;
+			}
+			main > div .center > div:nth-child(1) > span{
+				position: absolute;
+			    width: 25px;
+			    height: 25px;
+			    top: 31px;
+			    left: 284px;
+			}
+			main > div .center > div:nth-child(2){
+				position: relative;
+				height: calc(100% - 73px);
+				width: 100%;
+				overflow: hidden;
+			}
+			main > div .center > div:nth-child(2) #list{
+				width: 100%;
+				position: absolute;
+			}
+			main > div .center > div:nth-child(2) #list > div{
+				width: 100%;
+				height: calc(507px / 8);
+			}
+			main > div .center > div:nth-child(2) #list > div{
+				width: 100%;
+			}
+			main > div .center > div:nth-child(2) #list > div:hover{
+				background-color: #D2D1D1;
+			}
+			main > div .center > div:nth-child(2) #list > div > div{
+				position: relative;
+				transform: translateY(10px);
+			}
+			main > div .center #list > div img{
+				vertical-align: middle;
+			}
+			main > div .center #list > div span{
+				display: inline-block;
+				padding-left: 8px;
+			}
+			main > div .center #list > div span:nth-child(2){
+				left: 58px;
+			    position: absolute;
+			    color: #000;
+			    font-size: 14px;
+			}
+			main > div .center #list > div span:nth-child(2):before{
+				content: "asdasdasd";
+			    position: absolute;
+			    bottom: -22px;
+			    font-size: 14px;
+			    color: #999999;
+			}
+			main > div .center #list > div span:nth-child(2):after{
+				content: "time";
+			    position: absolute;
+			    right: -92px;
+			    font-size: 14px;
+			    color: #999999;
+			}
+			#scroll{
+				width:8px;
+				height:100%;
+				position:absolute;
+				top:0;
+				right:0;
+			}
+			#bar{
+				height:100px;
+				width:100%;
+				position:absolute;
+				top:0;
+				left:0;
+				background:none;
+				border-radius:5px;	/*-----------------圆角边框---------------------*/
+				cursor:pointer;
+				display: none;
+			}
+			main > div .center > div:nth-child(2):hover #bar{
+				display: block;
+				background:#A7A6A4;
+			}
+			
+			
+			main > div .right{
+				width: calc(850px - 65px - 255px);
+				height: 100%;
+				background-color: #F5F5F5;
+			}
+			main > div .right > div:nth-child(1),main div .right > div:nth-child(2){
+				border-bottom:1px solid #E7E7E7;
+			}
+			main > div .right > div:nth-child(1){
+				height: 73px;
+				line-height: 73px;
+				font-size: 18px;
+				padding-left: 30px;
+			}
+			main > div .right > div:nth-child(2){
+				height: 370px;
+			}
+			main > div .right > div:nth-child(3){
+				background-color: #fff;		
+				height: calc(580px - 73px - 370px);		
+			}
+			main > div .right textarea{
+				width: 100%;
+				height: 100%;
+				border: 0;
+				outline: none;
+				resize: none;
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div>
+				<div class="left iconfont">
+					<div></div>
+					<div class="liaotian"></div>
+					<div class="tongxunlu"></div>
+					<div class="soucang"></div>
+					<div class="wenjian"></div>
+					<div class="shouji"></div>
+					<div class="gengduo"></div>
+				</div>
+				<div class="center">
+					<div class="iconfont">
+						<input type="text" name="search" id="search" value="" placeholder="搜索" />
+						<span class="iconfont tianjia"></span>
+					</div>
+					<div>
+						<div id="list">
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+							<div>
+								<div>
+									<span><img src="img/2KriyDK.png" width="45px" height="45px"/></span>
+									<span>文件传输助手</span>
+								</div>
+							</div>
+						</div>
+						<div id="scroll">
+				        	<div id="bar"></div>
+				        </div>
+					</div>
+				</div>
+				<div class="right">
+					<div>文件传输助手</div>
+					<div></div>
+					<div>
+						<textarea></textarea>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script type="text/javascript">
+			// 0 获取元素
+			var box = document.querySelector('main > div .center > div:nth-child(2)');
+			var content = document.getElementById('list');
+			var scroll = document.getElementById('scroll');
+			var bar = document.getElementById('bar');
+			// 1 根据内容大小计算滚动条的高度
+			
+			// box的高度 / content的高度 = bar的高度 / scroll的高度
+			// 整个内容的大小
+			// console.log(content.scrollHeight);
+			var barHeight = 0;
+			if(content.scrollHeight > box.offsetHeight){	
+				barHeight = box.offsetHeight / content.scrollHeight * scroll.scrollHeight;
+			}
+			bar.style.height = barHeight + 'px';
+			
+			// 2 拖动滚动条
+			// 2.1 鼠标在bar上按下的时候，计算鼠标在bar中的位置
+			bar.onmousedown = function(e){
+				// 鼠标在bar中的位置
+				var barY = e.pageY - bar.offsetTop - box.offsetTop;
+				
+				// 2.2 鼠标在页面中移动的时候，计算bar在父容器中的坐标
+				document.onmousemove = function(e){
+					var y = e.pageY - barY - box.offsetTop;
+					
+					// 限制y不能越界
+					y = y < 0 ? 0 : y;
+					
+					// bar最大能移动的距离 = scroll的高度 - bar的高度
+					var barMaxY = scroll.scrollHeight - barHeight;
+					y = y > barMaxY ? barMaxY : y;
+					
+					//console.log(box.scrollHeight + '   ' + box.offsetHeight);
+					//console.log(content.scrollHeight + '   ' + content.offsetHeight);
+					//console.log(scroll.scrollHeight + '   ' + scroll.offsetHeight);
+					//console.log(bar.scrollHeight + '   ' + bar.offsetHeight);
+					bar.style.top = y + 'px';
+					
+					// 3 当拖动滚动条的时候，移动
+					// bar移动的距离 / 内容移动的距离 = bar最大移动的距离 / 内容最大移动的距离
+					// 内容移动的距离 = bar移动的距离 * 内容最大移动的距离 / bar最大移动的距离
+					var contentMaxY = content.scrollHeight - box.offsetHeight;
+					var contentY = y * contentMaxY / barMaxY;
+					content.style.top = -contentY + 'px';
+				}
+			}
+			// 当鼠标弹起的时候，移除鼠标的移动事件
+			document.onmouseup = function(){
+				document.onmousemove = null;
+			}
+		</script>
+	</body>
+</html>
